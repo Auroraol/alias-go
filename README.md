@@ -10,7 +10,7 @@
 go build -o als
 ```
 
-![image-20250611142056506](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611142056506.png)
+![image-20250611142056506](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611142039994.png)
 
 **安装到系统路径**
 
@@ -23,7 +23,7 @@ export PATH="$(pwd):$PATH"
 echo 'export PATH="'$(pwd)':$PATH"' >> ~/.bashrc
 ```
 
-![image-20250611142039994](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611142039994.png)
+![image-20250611142039994](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611142056506.png)
 
 ## 使用方法
 
@@ -98,7 +98,7 @@ als init bash
 ./als init powershell
 ```
 
-![image-20250611142522969](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611142522969.png)
+![image-20250611142522969](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225304905.png)
 
 ### Shell 集成
 
@@ -160,7 +160,7 @@ als init fish
 als init powershell
 ```
 
-![image-20250611225700222](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611225700222.png)
+![image-20250611225700222](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611142522969.png)
 
 ### Cron 任务管理
 
@@ -181,7 +181,7 @@ echo "hello world" >>/opt/software/a.txt
 als cron add "* * * * *" "/opt/software/test.sh"  #每分钟执行
 ```
 
-![image-20250611225304905](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611225304905.png)
+![image-20250611225304905](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225700222.png)
 
 查看当前用户的 cron 任务
 
@@ -189,7 +189,7 @@ als cron add "* * * * *" "/opt/software/test.sh"  #每分钟执行
 als cron list
 ```
 
-![image-20250611225321477](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611225321477.png)
+![image-20250611225321477](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225321477.png)
 
 编辑 cron 任务
 
@@ -215,7 +215,7 @@ als cron delete 3    # 删除第3行的任务
 cron_status
 ```
 
-![image-20250611225432822](C:/Users/16658/AppData/Roaming/Typora/typora-user-images/image-20250611225432822.png)
+![image-20250611225432822](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225432822.png)
 
 #### Cron 表达式格式
 
@@ -258,17 +258,6 @@ cron_status
 
 + go
 + cobra(命令行程序库，可以用来编写命令行程序)
-
-### 项目结构
-```
-├── main.go         # 主程序和命令行接口
-├── config.go       # 配置文件处理
-├── shells.go       # Shell 脚本生成
-├── config_test.go  # 单元测试
-├── go.mod          # Go 模块依赖
-├── Makefile        # 构建脚本
-└── README.md       # 项目文档
-```
 
 ### 依赖说明
 - `github.com/spf13/cobra`: 命令行接口框架
