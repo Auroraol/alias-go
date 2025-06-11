@@ -178,7 +178,8 @@ echo "hello world" >>/opt/software/a.txt
 添加新的 cron 任务
 
 ```shell
-als cron add "* * * * *" "/opt/software/test.sh"  #每分钟执行
+als cron add "* * * * *" "/opt/software/test.sh"    #每分钟执行
+als cron add "0 2 * * *" "/opt/script/clean_xiaoduo_logs.sh"  # 每天凌晨 2 点执行
 ```
 
 ![image-20250611225304905](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225700222.png)
@@ -216,6 +217,28 @@ cron_status
 ```
 
 ![image-20250611225432822](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611225432822.png)
+
+####  例子
+
+```bash
+/opt # cd script/
+opt/script # ls
+clean_xiaoduo_logs.sh  connect_dev.sh  connect_mini.sh
+opt/script # vim clean_xiaoduo_logs.sh
+opt/script # chmod +x clean_xiaoduo_logs.sh 
+opt/script # pwd                                                                
+/opt/script
+opt/script # als cron add "0 2 * * *" "/opt/script/clean_xiaoduo_logs.sh"                           
+成功添加 cron 任务: 0 2 * * * /opt/script/clean_xiaoduo_logs.sh
+opt/script # als cron list
+当前 cron 任务:
+------------------------------------------------------------
+1: 0 2 * * * /opt/script/clean_xiaoduo_logs.sh
+总共 1 个活跃任务
+opt/script #     
+```
+
+![image-20250611232715033](https://github.com/Auroraol/Drawing-bed/raw/main/img/image-20250611232715033.png)
 
 #### Cron 表达式格式
 
